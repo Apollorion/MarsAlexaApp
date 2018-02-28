@@ -28,16 +28,10 @@ namespace MarsAlexaApp
         /// <returns></returns>
         public SkillResponse FunctionHandler(SkillRequest input, ILambdaContext context)
         {       
-            Task<string> JSON = getJsonFromURL("http://marsweather.ingenology.com/v1/latest/?format=json");
+            Task<string> JSON = getJsonFromURL("https://api.maas2.jiinxt.com/");
             JSON.Wait();
 
-            dynamic jsonDe = JsonConvert.DeserializeObject(JSON.Result);
-            dynamic marsData = jsonDe["report"];
-
-            string sunrise = marsData["sunrise"];
-            string sunset = marsData["sunset"];
-            string[] sunriseArray = sunrise.Split(Char.Parse(" "));
-            string[] sunsetArray = sunset.Split(Char.Parse(" "));
+            dynamic marsData = JsonConvert.DeserializeObject(JSON.Result);
 
             var requestType = input.GetRequestType();
 
@@ -50,26 +44,26 @@ namespace MarsAlexaApp
             }
             else
             {
-                return Intents(marsData, sunsetArray, sunriseArray, input);
+                return Intents(marsData, input);
             }
         }
 
-        private SkillResponse Intents(dynamic marsData, string[] sunsetArray, string[] sunriseArray, SkillRequest input)
+        private SkillResponse Intents(dynamic marsData, SkillRequest input)
         {
             var intentRequest = input.Request as IntentRequest;
 
             if (intentRequest.Intent.Name.Equals("GetMarsDataIntent"))
             {
-                return Response("It is currently " + marsData["atmo_opacity"] + " with a high of " + marsData["max_temp_fahrenheit"] + 
-                    " , and a low of " + marsData["min_temp_fahrenheit"] + " on mars.");
+                return Response("It is currently " + marsData["atmo_opacity"] + " with a high of " + marsData["max_temp"] + 
+                    " , and a low of " + marsData["min_temp"] + " on mars.");
             }
             else if (intentRequest.Intent.Name.Equals("GetMarsSunsetIntent"))
             {
-                return Response("Today the sun will set at " + sunsetArray[1] + " on mars.");
+                return Response("Today the sun will set at " + marsData["sunset"] + " on mars.");
             }
             else if (intentRequest.Intent.Name.Equals("GetMarsSunriseIntent"))
             {
-                return Response("Tomorrow the sun will rise at " + sunriseArray[1] + " on mars.");
+                return Response("Tomorrow the sun will rise at " + marsData["sunrise"] + " on mars.");
             }
             else if (intentRequest.Intent.Name.Equals("GetHelpIntent"))
             {

@@ -1,0 +1,8 @@
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\bin\Release\netcoreapp1.0\MarsAlexaApp.deps.json
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\bin\Release\netcoreapp1.0\MarsAlexaApp.dll
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\bin\Release\netcoreapp1.0\MarsAlexaApp.pdb
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\obj\Release\netcoreapp1.0\MarsAlexaApp.csproj.CoreCompileInputs.cache
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\obj\Release\netcoreapp1.0\MarsAlexaApp.AssemblyInfoInputs.cache
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\obj\Release\netcoreapp1.0\MarsAlexaApp.AssemblyInfo.cs
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\obj\Release\netcoreapp1.0\MarsAlexaApp.dll
+\\vmware-host\Shared Folders\Desktop\C# Projects\MarsAlexaApp\MarsAlexaApp\obj\Release\netcoreapp1.0\MarsAlexaApp.pdb

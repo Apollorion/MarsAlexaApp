@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.25420.1
+# Visual Studio 15
+VisualStudioVersion = 15.0.27130.2036
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{8BB2217D-0F2D-49D1-97BC-3654ED321F3B}") = "MarsAlexaApp", "MarsAlexaApp\MarsAlexaApp.xproj", "{78A0A016-88D5-4AD9-A1E9-511A88CC19F2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "MarsAlexaApp", "MarsAlexaApp\MarsAlexaApp.csproj", "{78A0A016-88D5-4AD9-A1E9-511A88CC19F2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -18,5 +18,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C73CE1FA-1ED8-4CA3-924F-BE7C8D93AF7F}
 	EndGlobalSection
 EndGlobal
