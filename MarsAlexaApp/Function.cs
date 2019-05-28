@@ -28,7 +28,7 @@ namespace MarsAlexaApp
         /// <returns></returns>
         public SkillResponse FunctionHandler(SkillRequest input, ILambdaContext context)
         {       
-            Task<string> JSON = getJsonFromURL("https://api.maas2.jiinxt.com/");
+            Task<string> JSON = getJsonFromURL("https://api.maas2.apollorion.com/");
             JSON.Wait();
 
             dynamic marsData = JsonConvert.DeserializeObject(JSON.Result);
